@@ -54,16 +54,16 @@ class NQueens {
             positions.map((pos, i) => {
                 for (let j = 0; j < n; j++) {
                     if (pos.y === j) {
-                        buffer.push('👑 ');
+                        buffer.push('q');
                     } else {
                         if (i % 2) {
                             buffer.push((j % 2)
-                                ? '⬜ '
-                                : '⬛ ');
+                                ? 'w '
+                                : 'b ');
                         } else {
                             buffer.push((j % 2)
-                                ? '⬛ '
-                                : '⬜ ')
+                                ? 'b '
+                                : 'w ')
                         }
                     }
                 }

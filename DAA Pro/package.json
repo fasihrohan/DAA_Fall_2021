@@ -1,0 +1,42 @@
+{
+  "name": "n-queens",
+  "version": "1.0.1",
+  "description": "A JavaScript (ES 2015) implementation of the N-Queens Problem solver.",
+  "main": "index.js",
+  "scripts": {
+    "start": "php -S localhost:5000",
+    "build": "gulp",
+    "tasks": "gulp --tasks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giovanni0918/n-queens.git"
+  },
+  "keywords": [
+    "n-queens",
+    "problem-solver",
+    "javascript",
+    "es2015",
+    "giovanni0918",
+    "giovanniorlando"
+  ],
+  "author": "Giovanni Orlando Rivera <gorlandor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giovanni0918/n-queens/issues"
+  },
+  "homepage": "https://github.com/giovanni0918/n-queens#readme",
+  "dependencies": {
+    "workbox-sw": "^4.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^2.1.2"
+  }
+}

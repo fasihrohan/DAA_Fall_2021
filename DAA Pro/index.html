@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Giovanni Orlando Rivera">
+    <meta name="description" content="A JavaScript (ES 2015) implementation of the N-Queens 👑 Problem solver.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009688">
+    <script>
+      const host='giovanni-orlando.com';if((host===window.location.host||`www.${host}`===window.location.host)&&(window.location.protocol!=='https:')){window.location.protocol='https:'}
+    </script>
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="N-Queens 👑">
+    <link rel="icon" sizes="192x192" href="images/icons/icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="N-Queens 👑">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#009688">
+
+    <title>N Queens Problem solver</title>
+    <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="manifest" href="manifest.json" />
+    <script defer src="dist/bundle.js" charset="utf-8"></script>
+</head>
+
+<body style="background-color:silver;">
+    <header class="header">N Queens</header>
+    <main class="content flex-center">
+        <form class="n-queens__form flex-center">
+            <label for="amountOfQueens">Amount of Queens:</label><br>
+            <input type="number" name="amountOfQueens" id="amountOfQueens" value="4" min="1" required />
+            <label>Solve for n:<input type="checkbox" name="solveForN"></label>
+            <button class="btn-submit">Submit</button>
+        </form>
+        <div><p>Time to solve: <span class="time--solve"></span></p></div>
+        <div><p>Time to print: <span class="time--paint"></span></p></div>
+        <div class="n-queens__wrapper"></div>
+
+        <div class="modal flex-center">
+            <div class="modal__content">
+                <button class="btn-close">×</button>
+                <p>N Queens Problem does not have a solution for N=2, or N=3.</p>
+                <p>For allSolutionsUtil usage: n <= 8</p>
+            </div>
+        </div>
+    </main>
+    <script async>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                },
+                i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-82693415-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    <script async>
+        //setup SW
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').then(function() {
+                console.log('SW registered');
+            }).catch(function(e) {
+                console.warn('SW offline');
+            });
+        }
+    </script>
+</body>
+
+</html>

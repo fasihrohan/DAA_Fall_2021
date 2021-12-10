@@ -26,6 +26,7 @@ now you will have 3 choices to place queen in last row. Hold the queen in any 2 
 Now only one box will be left and it will be in 4th row.
 
 References: 
+
 https://www.quora.com/What-is-the-best-algorithm-for-solving-n-queen-problems
 
 https://www.youtube.com/watch?v=pnLFu0yJzN8
